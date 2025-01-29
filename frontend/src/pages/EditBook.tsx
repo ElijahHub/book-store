@@ -36,7 +36,7 @@ export default function EditBook() {
     const getData = async () => {
       try {
         const res = await axios.get(`http://localhost:6980/books/${id}`);
-        const data: Books = await res.data;
+        const data: Books = await res.data.data;
 
         setState({
           ...state,
